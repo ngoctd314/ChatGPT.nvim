@@ -741,6 +741,7 @@ function Chat:open()
   self.sessions_panel = Sessions.get_panel(function(session)
     self:set_session(session)
   end)
+  self.open_extra_panels = { self.sessions_panel }
   self.chat_window = Popup(Config.options.popup_window)
   self.system_role_panel = SystemWindow({
     on_change = function(text)
